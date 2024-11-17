@@ -76,7 +76,6 @@ class StackTest {
     public void hacerPeek() {
         int resultado = stack.peek();
         assertEquals(-1, resultado);
-        System.out.println("PEEK: " + resultado);
 
     }
 

@@ -1,14 +1,13 @@
 package org.example;
 
 
-
 public class Stack {
     private int[] node;
     private int tamaño;
 
     public Stack(int capacidad) {
-        this.node=new int[capacidad];
-        this.tamaño=-1;
+        this.node = new int[capacidad];
+        this.tamaño = -1;
     }
 
     public void push(int valor) {
@@ -19,21 +18,22 @@ public class Stack {
     }
 
     public int size() {
-       return tamaño +1;
+        return tamaño + 1;
     }
 
     public int pop() throws IllegalAccessException {
-        if (isEmpty()){
+        if (isEmpty()) {
             throw new IllegalAccessException("El stack esta vacio");
-    }
-     return node[tamaño--];
+        }
+        return node[tamaño--];
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return tamaño == -1;
     }
+
     public int peek() {
-        if (tamaño==-1){
+        if (tamaño == -1) {
             return -1;
         }
         return node[tamaño];
